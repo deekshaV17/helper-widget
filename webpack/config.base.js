@@ -23,65 +23,6 @@ module.exports = {
         exclude: /(node_modules|bower_components|public\/)/,
         loader: 'babel-loader',
       },
-      {
-        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'file-loader',
-      },
-      {
-        test: /\.(woff|woff2)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'url-loader',
-        options: {
-          prefix: 'font/',
-          limit: 5000,
-        },
-      },
-      {
-        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'url-loader',
-        options: {
-          mimetype: 'application/octet-stream',
-          limit: 10000,
-        },
-      },
-      {
-        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'url-loader',
-        options: {
-          mimetype: 'application/image/svg+xml',
-          limit: 10000,
-        },
-      },
-      {
-        test: /\.gif/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'url-loader',
-        options: {
-          mimetype: 'application/image/gif',
-          limit: 10000,
-        },
-      },
-      {
-        test: /\.jpg/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'url-loader',
-        options: {
-          mimetype: 'application/image/jpg',
-          limit: 10000,
-        },
-      },
-      {
-        test: /\.png/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'url-loader',
-        options: {
-          mimetype: 'application/image/png',
-          limit: 10000,
-        },
-      },
     ],
   },
   plugins: [

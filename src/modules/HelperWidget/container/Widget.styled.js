@@ -32,6 +32,14 @@ const StyledWidget = styled.div`
       min-width: 100px;
     }
   }
+
+  .tab-list-active {
+    z-index: 999;
+
+    &:before {
+      background: #ddd;
+    }
+  }
 `;
 
 export default StyledWidget;

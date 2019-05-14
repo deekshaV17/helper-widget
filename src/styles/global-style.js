@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   #main {
-    height: 100vh;
+    height: 100%;
   }
 
   h1,
