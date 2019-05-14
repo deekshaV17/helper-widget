@@ -9,6 +9,7 @@ const StyledWidget = styled.div`
     border-bottom: 1px solid #ccc;
     padding-left: 0;
     display: flex;
+    justify-content: flex-end;
   }
 
   .tab-list-item {
@@ -26,6 +27,8 @@ const StyledWidget = styled.div`
       z-index: -1;
       background: #ccc;
       border-radius: 4px;
+      border: 1px solid #ccc;
+      border-width: 1px 1px 0 1px;
       transform: perspective(5px) rotateX(2deg);
     }
     div {
@@ -37,8 +40,13 @@ const StyledWidget = styled.div`
     z-index: 999;
 
     &:before {
-      background: #ddd;
+      background: #eee;
     }
+  }
+
+  .label {
+    display: flex;
+    justify-content: center;
   }
 `;
 

@@ -7,7 +7,7 @@ type Props = {
 
 class Tabs extends Component<Props> {
   state = {
-    activeTab: this.props.children[0].props.label,
+    activeTab: this.props.children[2].props.label,
   };
 
   onClickTabItem = (tab) => {

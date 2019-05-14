@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { Component } from 'react';
 
 type Props = {
@@ -26,7 +28,7 @@ class Tab extends Component<Props> {
 
     return (
       <li className={className} onClick={onClick}>
-        <div>{label}</div>
+        <div className="label">{label}</div>
       </li>
     );
   }
