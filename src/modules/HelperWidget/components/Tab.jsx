@@ -28,7 +28,12 @@ class Tab extends Component<Props> {
 
     return (
       <li className={className} onClick={onClick}>
-        <div className="label">{label}</div>
+        <div className="label">
+          {label === 'Mail Us' && <i className="far fa-envelope" />}
+          {label === 'FAQ' && <i className="fas fa-search" />}
+          {label === 'Live Chat' && <i className="fas fa-comment-alt" />}
+          <span className="label-name">{label}</span>
+        </div>
       </li>
     );
   }
