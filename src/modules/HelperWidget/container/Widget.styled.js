@@ -47,6 +47,11 @@ const StyledWidget = styled.div`
   .label {
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    .label-name {
+      margin-left: 10px;
+    }
   }
 `;
 
