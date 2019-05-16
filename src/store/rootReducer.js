@@ -1,12 +1,8 @@
 import { combineReducers } from 'redux';
-import app from 'modules/App/store/reducer';
+import tabs from 'modules/HelperWidget/store/reducer';
 
 const appReducer = combineReducers({
-  app,
+  tabs,
 });
 
-export default function rootReducer(state, action) {
-  // TODO: Set state = {} for a successful logout action
-
-  return appReducer(state, action);
-}
+export default appReducer;
