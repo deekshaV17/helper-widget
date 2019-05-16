@@ -3,36 +3,28 @@ import Tab from './Tab';
 
 type Props = {
   children: React.Node,
+  active: number,
+  changeActiveTab: (number) => {},
 };
 
 class Tabs extends Component<Props> {
-  state = {
-    activeTab: this.props.children[2].props.label,
-  };
-
-  onClickTabItem = (tab) => {
-    this.setState({ activeTab: tab });
-  };
-
   render() {
     const {
-      onClickTabItem,
-      props: { children },
-      state: { activeTab },
+      props: { children, changeActiveTab, active },
     } = this;
 
     return (
       <div className="tabs">
         <ol className="tab-list">
-          {children.map((child) => {
+          {children.map((child, index) => {
             const { label } = child.props;
 
-            return <Tab activeTab={activeTab} key={label} label={label} onClick={onClickTabItem} />;
+            return <Tab activeTab={active} index={index} key={index} label={label} onClick={changeActiveTab} />;
           })}
         </ol>
         <div className="tab-content">
-          {children.map((child) => {
-            if (child.props.label !== activeTab) return undefined;
+          {children.map((child, index) => {
+            if (index !== active) return undefined;
             return child.props.children;
           })}
         </div>

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import HelperBox from './HelperBox';
+import HelperBox from '../HelperBox';
 import FAQWrapper from './Faq.styled';
+
+type Props = {
+  changeActiveTab: (Object) => {},
+};
 
 class FAQ extends Component<Props> {
   state = {
@@ -15,7 +19,7 @@ class FAQ extends Component<Props> {
     const { search } = this.state;
     return (
       <FAQWrapper>
-        <HelperBox />
+        <HelperBox changeActiveTab={this.props.changeActiveTab} />
         <div className="faq-wrapper">
           <input
             value={search}

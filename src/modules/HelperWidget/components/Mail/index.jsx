@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import { Alert } from 'components';
 import MailWrapper from './Mail.styled';
+
+type Props = {
+  alert: Object,
+  sendMail: (Object) => Boolean,
+};
 
 class Mail extends Component<Props> {
   state = {
-    to: 'hggjh',
+    to: 'support@recruiterbox.com',
     subject: '',
     message: '',
   };
@@ -12,10 +18,16 @@ class Mail extends Component<Props> {
     this.setState({ [field]: value });
   };
 
+  sendMail = () => {
+    this.props.sendMail(this.state);
+  };
+
   render() {
     const { to, subject, message } = this.state;
+    const { alert } = this.props;
     return (
       <MailWrapper>
+        {alert.show && <Alert alert={alert} />}
         <div className="to-wrapper">
           <input value={to} disabled className="mail-to" />
         </div>

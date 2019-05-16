@@ -6,23 +6,24 @@ type Props = {
   label: String,
   onClick: (string) => {},
   activeTab: string,
+  index: number,
 };
 
 class Tab extends Component<Props> {
   onClick = () => {
-    const { label, onClick } = this.props;
-    onClick(label);
+    const { onClick, index } = this.props;
+    onClick(index);
   };
 
   render() {
     const {
       onClick,
-      props: { activeTab, label },
+      props: { activeTab, label, index },
     } = this;
 
     let className = 'tab-list-item';
 
-    if (activeTab === label) {
+    if (activeTab === index) {
       className += ' tab-list-active';
     }
 
