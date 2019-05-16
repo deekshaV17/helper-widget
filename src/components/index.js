@@ -1,2 +1,3 @@
 import Loading from './Loading';
-export { Loading };
+import Alert from './Alert';
+export { Loading, Alert };
